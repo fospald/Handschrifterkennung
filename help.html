@@ -1,0 +1,38 @@
+<h1>Handschrifterkennung</h1>
+
+Der Algorithmus zur Handschrifterkennung beruht auf dem mathematischen Verfahren der Support Vector Machines (SVM). Ausgangsbasis dieses Verfahrens ist eine Menge von Test- bzw. Trainingsdaten. Im Verfahren der SVMs wird eine Hyperebene gesucht, welche Trainingsobjekte trennt. So entstehen zwei verschiedene Klassen. Wird nun ein neues Objekt hinzugefuegt, kann es einer Klasse zugeordnet werden. Im Fall der Ziffernerkennung ist die Menge der Trainingsdaten eine Reihe von Beispielen geschriebener Ziffern. Fuer diese Ziffern ist bekannt, zu welcher Klasse sie gehoeren, das heisst welche Ziffer sie darstellen sollen. Allgemeingesprochen wird das Programm mit diesen Testdaten trainiert. Ziel ist, dass das trainierte Programm nach und nach ein Muster erkennt und dann selbststaendig die vom Benutzer geschriebene Ziffer der richtigen Klasse zuordnet. Je besser das Programm trainiert ist, desto geringer ist die Irrtumswahrscheinlichkeit.
+
+<h2>Benutzeroberflaeche</h2>
+
+Die Benutzeroberflaeche zur Ziffernerkennung besteht aus vier Fenstern und zwei Buttons. Das grosse Fenster zur Benutzereingabe befindet sich auf der linken Seite der Oberflaeche. Auf der rechten Seite sind die Pixmap, das Balkendiagramm zu den Ziffernwahrscheinlichkeiten und die erkannte Ziffer uebereinander angeordnet. Am oberen Rand der entstandenen Benutzeroberflaeche befinden sich der Vollbild- und der Hilfe-Button.
+Wird das Programm zum ersten Mal verwendet, wird es automatisch mit 20000 Testdaten trainiert. Bei jeder folgenden Benutzung ist dies bereits erledigt, woraufhin hierauf verzichtet wird. Die Bedienung der Anwendung ist einfach gehalten. Zeichnen Sie als Benutzer eine Ziffer in das Eingabefeld, wird diese automatisch in eine Pixmap transformiert, wenn Sie die Eingabe abgeschlossen haben. Es wird davon ausgegangen, dass dies der Fall ist, wenn eine Sekunde lang nicht mehr gezeichnet wurde. Diese Pixmap wird im Hintergrund in das Programm zur Handschrifterkennung eingelesen und weiterverarbeitet. Anschliessend werden die Ziffernwahrscheinlichkeiten an unser Programm uebergeben. Diese Ablaeufe bleiben Ihnen als Benutzer verborgen. Nachdem Sie also die Ziffer geschrieben haben, wird diese in eine 16x16  Pixmap gezeichnet, die Ihnen angezeigt wird. Die vom Programm zur Handschrifterkennung zurueckgegebenen Wahrscheinlichkeiten werden in einem Balkendiagramm in Prozent angezeigt, der Balken der Ziffer mit der groessten Wahrscheinlichkeit wird gruen eingefaerbt und die Zahl wird als erkannte Ziffer im entsprechenden Fenster ausgegeben. Wird der Button Vollbild gedrueckt, wird fuer die Benutzeroberflaeche der Vollbildmodus aktiviert. Beim Ausloesen des Hilfe-Buttons wird dieses separate Fenster geoeffnet, welches Hilfestellungen fuer die Benutzung gibt.
+
+
+<h3>Achtung</h3>
+
+Wird die Benutzeroberflaeche geoeffnet, wird die 5 als erkannte Zahl ausgegeben. Ausserdem ergeben die Einzelwahrscheinlichkeiten der Ziffern in Summe 101 Prozent. Dies erscheint im ersten Moment unzulaessig und verwirrend. Immerhin wurde zu diesem Zeitpunkt noch keine Ziffer in das Eingabefenster gezeichnet. Allerdings ist dies das Ergebnis der Ziffernerkennung angewendet auf ein leeres Bild. Die Summe der Wahrscheinlichkeiten von 101 Prozent kommt durch Rundungsfehler zustande. Man sieht, dass in diesem Fall die einzelnen Ziffern nahezu gleichwahrscheinlich sind. Das Programm vermutet bei einem leeren Bild am ehesten die Ziffer 5.
+
+<h2>MNIST Training Set</h2>
+
+Wie oben beschrieben beruht die Auswertung der Benutzereingabe auf Trainingsdaten. Diese stammen aus dem US-amerikanischen Schriftgebrauch. Da die hier uebliche Schreibweise einiger Ziffern von der der Trainingsdaten abweicht, kann es dazu kommen, dass sich das Programm bei diesen Ziffern haeufiger taeuscht und die Eingabe nicht richtig erkennt. Sollten Sie als Benutzer dieses Problem haben, koennen Sie sich bei Ihrer Eingabe an dem unten sichtbaren Ausschnitt aus den Trainingsdaten orientieren. 
+
+<p>
+	<a href="http://yann.lecun.com/exdb/mnist/">MNIST Homepage</a>
+</p>
+<p>
+	<img src="MnistExamples.png" />
+</p>
+
+
+<h2>Systemanforderungen</h2>
+
+Sollte das Programm bei Ihnen nicht wie erhofft laufen, sollten Sie pruefen, ob alle Systemanforderungen installiert wurden. Im Folgenden sehen Sie eine Liste aller fuer einen reibungslosen Ablauf erforderlicher Software.
+
+<ul>
+	<li>Python 3</li>
+	<li>SciPy</li>
+	<li>PyQt5</li>
+	<li><a href="https://www.tensorflow.org">TensorFlow</a> 1.6</li>
+</ul>
+
+
