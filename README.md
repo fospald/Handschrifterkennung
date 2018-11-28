@@ -22,6 +22,8 @@ The handwriting recognition algorithm is based on the mathematical method of Sup
 
 ## GUI
 
+![GUI](screenshot.png)
+
 The user interface for digit recognition consists of four windows and two buttons. The large window for user input is located on the left side of the surface. On the right side, the pixmap, the bar graph of the number probabilities and the recognized number are arranged one above the other. At the top of the resulting user interface are the full screen and the Help button.
 When used for the first time, it will automatically be trained with 20000 test data. For each subsequent use this is already done, after which it is dispensed with. The operation of the application is kept simple. As a user, if you draw a number in the input field, it is automatically transformed into a pixmap when you have finished the input. It is assumed that this is the case if one second has not been drawn. This pixmap is read into the handwriting recognition program in the background and further processed. Subsequently, the number probabilities are passed to our program. These processes are hidden from you as a user. So after you type the number, it's drawn in a 16x16 pixmap that you see. The probabilities returned by the handwriting recognition program are displayed in a bar graph in percent, the bar of the most probable number is greened and the number is output as the recognized digit in the corresponding window. If the button full screen is pressed, the full screen mode is activated for the user interface. When opening the help button, this separate window will be opened, which will help you to use it.
 
@@ -35,4 +37,7 @@ As described above, the evaluation of the user input is based on training data. 
 
 See also: [MNIST Homepage](http://yann.lecun.com/exdb/mnist/)
 
+## Acknowledgements
+
+Developed by Thereas Wagner under supervison of [Felix Ospald](https://www-user.tu-chemnitz.de/~feo).
 
