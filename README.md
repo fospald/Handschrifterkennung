@@ -1,6 +1,6 @@
 # Handschrifterkennung
 
-Handschrifterkennung von Zahlen mit TensorFlow
+Handwriting recognition of numbers with TensorFlow.
 
 ## Requirements
 
