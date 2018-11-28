@@ -13,7 +13,7 @@ from PyQt5.QtCore import (pyqtSlot, pyqtSignal, Qt, QTimer, QRect)
 import numpy as np
 
 from TensorFlowMNIST_Classifier import TensorFlowMNIST_Classifier
-	
+
 
 class NumberDrawWidget(QFrame):
 

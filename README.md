@@ -2,31 +2,17 @@
 
 Handschrifterkennung von Zahlen mit TensorFlow
 
-## Installation
+## Requirements
 
-To install (TensorFlow)[https://www.tensorflow.org/install/install_linux]
-```
-  sudo apt-get install python3-pip python3-dev python-virtualenv
-  virtualenv --system-site-packages -p python3 ~/Work/Software/tensorflow
-  source ~/Work/Software/tensorflow/bin/activate
-  easy_install -U pip
-  pip3 install --upgrade tensorflow
-```
+* [Python 3](https://www.python.org/)
+* [scipy](https://www.scipy.org/)
+* [TensorFlow](https://www.tensorflow.org/)
+* [PyQt5](https://www.riverbankcomputing.com/software/pyqt/download5)
 
-To test
-  
-```
-  ipython3 
-  import tensorflow as tf
-  hello = tf.constant('Hello, TensorFlow!')
-  sess = tf.Session()
-  print(sess.run(hello))
-```
-
-To run
+## Running
 
 ```
-  ipython3 Handschrifterkennung.py
-  ipython3 Handschrifterkennung_v2.py
+  python3 Handschrifterkennung.py
+  python3 Handschrifterkennung_v2.py
 ```
 
