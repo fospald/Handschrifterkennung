@@ -39,5 +39,5 @@ See also: [MNIST Homepage](http://yann.lecun.com/exdb/mnist/)
 
 ## Acknowledgements
 
-Developed by Thereas Wagner under supervison of [Felix Ospald](https://www-user.tu-chemnitz.de/~feo).
+Developed by Theresa Wagner under supervison of [Felix Ospald](https://www-user.tu-chemnitz.de/~feo).
 
